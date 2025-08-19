@@ -20,6 +20,7 @@
 * Cron worker, run each 10 second, fetch data in database with status PENDING
 * Not actually sending the email, just print the content of data
 * Update the data with status SENT
+* Using shared db with email-service
 
 ### notification-service
 * Located on `/notification-service`
@@ -31,6 +32,7 @@
 * Cron worker, run each 10 second, fetch data in database with status PENDING
 * Not actually sending the email, just print the content of data
 * Update the data with status SENT
+* Using shared db with notification-service
 
 ### google-analytics service
 * Located on `/google-analytics` folder
@@ -86,7 +88,7 @@ Attributes:
 * No need to create a unit test, the project should be lean, instead create a `/test-simulation` folder, where there are two commands that can be run inside: `go run /test-simulation basic 100`, where it will simulate 100 orders of `basic order` service. and another one `go run /test-simulation improved 100` where it will run 100 order simulation to `improved order` service
 * Use godotenv to load .env 
 * .env contains: service-name (that will be printed out when starting the service), server port, (for worker) cron period (in seconds)
-* No readme.md or any markdown
+* No readme.md or any markdown, except README.md that contains how to run the project or run the simulation.
 * No comments on the code, make the code speak itself
 * No docker, the code will be run via `cmd ./cmd/main.go {service-name}`
 * Use viper for managing the entry point to run services/workers
