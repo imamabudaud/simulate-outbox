@@ -56,12 +56,12 @@ make outbox-worker
 
 ### Basic Order Simulation (Direct API calls):
 ```bash
-make test-basic 100
+make test-basic ARGS=100
 ```
 
 ### Improved Order Simulation (Outbox pattern):
 ```bash
-make test-improved 100
+make test-improved ARGS=100
 ```
 
 ## API Endpoints
